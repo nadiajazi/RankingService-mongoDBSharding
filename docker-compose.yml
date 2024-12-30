@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  configsvr1:
+    image: mongo:6.0
+    command: mongod --configsvr --replSet configReplSet --bind_ip localhost --port 27017
+    ports:
+      - 27017:27017
+    volumes:
+      - ./configsvr1:/data/db
+
+  shard1:
+    image: mongo:6.0
+    command: mongod --shardsvr --replSet shard1ReplSet --bind_ip localhost --port 27018
+    ports:
+      - 27018:27018
+    volumes:
+      - ./shard1:/data/db
+
+  shard2:
+    image: mongo:6.0
+    command: mongod --shardsvr --replSet shard2ReplSet --bind_ip localhost --port 27019
+    ports:
+      - 27019:27019
+    volumes:
+      - ./shard2:/data/db
+
+  mongos:
+    image: mongo:6.0
+    command: mongos --configdb configReplSet/localhost:27017 --bind_ip localhost --port 27020
+    ports:
+      - 27020:27020
