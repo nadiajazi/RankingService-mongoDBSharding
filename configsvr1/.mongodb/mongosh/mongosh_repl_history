@@ -1,0 +1,28 @@
+rs.initiate({ _id: "configReplSet", configsvr: true, members: [ { _id: 0, host: "dfcd370e556f:27017" }] });
+});
+    ]
+        { _id: 0, host: "rank-configsvr1-1:27017" }
+    members: [
+    configsvr: true,
+    _id: "configReplSet",
+rs.initiate({
+exit
+rs.status()
+exit
+rs.status()
+exit
+rs.status()
+rs.initiate({ _id: "configReplSet", configsvr: true, members: [{ _id: 0, host: "localhost:27017" }] });
+rs.status()
+rs.initiate({ _id: "configReplSet", configsvr: true, members: [ { _id: 0, host: "localhost:27017" }] })
+rs.remove("localhost:27017")
+rs.initiate({ _id: "configReplSet", configsvr: true, members: [ { _id: 0, host: "localhost:27017" }] })
+rs.remove("localhost:27017")
+rs.status()
+rs.initiate({ _id: "configReplSet", members: [ { _id: 0, host: "configsvr1:27017" }] })
+rs.initiate({ _id: "configReplSet", configsvr: true, members: [{ _id: 0, host: "localhost:27017" }] });
+rs.initiate({ _id: "configReplSet", members: [ { _id: 0, host: "172.18.0.2:27017" }] })
+rs.initiate({ _id: "configReplSet", members: [ { _id: 0, host: "172.18.0.2:27017" }] })
+rs.initiate({ _id: "configReplSet", members: [ { _id: 0, host: "configsvr1:27017" }] })
+rs.status()
+exit
