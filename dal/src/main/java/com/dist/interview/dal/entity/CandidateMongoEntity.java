@@ -2,6 +2,8 @@ package com.dist.interview.dal.entity;
 
 
 
+import com.dist.interview.dalapilayer.CandidateEntity;
+import com.dist.interview.javacc.infra.model.Status;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +17,7 @@ import java.util.List;
 @Document(collection = "candidates")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Candidate {
+public class CandidateMongoEntity implements CandidateEntity {
     @Id
     private String id;
     private String interviewId;
@@ -27,6 +29,8 @@ public class Candidate {
     private Integer responseTime;
     private String feedback;
     private Double rating;
-    private String status;
+    private Status status;
+    private String location;
     private Date createdAt;
+
 }

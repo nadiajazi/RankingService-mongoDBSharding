@@ -1,5 +1,6 @@
 package com.dist.interview.dal.entity;
 
+import com.dist.interview.dalapilayer.InterviewEntity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Data
 @Document(collection = "interview")
-public class Interview {
+public class InterviewMongoEntity implements InterviewEntity {
     @Id
     private String id;
     private String criteriaId;
