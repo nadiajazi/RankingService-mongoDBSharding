@@ -18,6 +18,7 @@ public class InterviewMongoEntity implements InterviewEntity {
     private String id;
     private String criteriaId;
     private Date interviewDate;
+    private String candidateId;
     private String interviewerName;
     private String companyName;
     private Date createdAt;
